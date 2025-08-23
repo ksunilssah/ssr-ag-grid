@@ -1,0 +1,42 @@
+/* VscodeLayoutExample.module.css */
+.root {
+  height: 500px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--colorNeutralBackground1);
+  position: relative;
+}
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--colorNeutralBackground2);
+}
+.time {
+  margin-left: 16px;
+  color: var(--colorNeutralForeground1);
+  font-weight: 500;
+}
+.editorTabs {
+  background: var(--colorNeutralBackground3);
+  color: var(--colorNeutralForeground1);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+.editor {
+  background: var(--colorNeutralBackground1);
+  color: var(--colorNeutralForeground1);
+  height: calc(100% - 40px);
+  padding: 16px;
+}
+.editorPre {
+  margin: 0;
+}

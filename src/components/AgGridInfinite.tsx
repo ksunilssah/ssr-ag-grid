@@ -11,7 +11,9 @@ const columnDefs = [
   { field: 'country', sortable: true, filter: 'agTextColumnFilter' },
 ];
 
-const AgGridInfinite: React.FC = () => {
+const AgGridInfinite: React.FC<{ theme?: 'light' | 'dark' }> = ({
+  theme = 'light',
+}) => {
   const gridRef = useRef<any>(null);
   const dispatch = useDispatch();
   const gridState = useSelector((state: any) => state.grid.state);
@@ -89,7 +91,10 @@ const AgGridInfinite: React.FC = () => {
   };
 
   return (
-    <div className="ag-theme-alpine" style={{ height: 350 }}>
+    <div
+      className={theme === 'light' ? 'ag-theme-alpine' : 'ag-theme-alpine-dark'}
+      style={{ height: 350 }}
+    >
       <AgGridReact
         ref={gridRef}
         columnDefs={columnDefs}
